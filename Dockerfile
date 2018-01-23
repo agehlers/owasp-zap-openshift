@@ -14,6 +14,9 @@ RUN yum install -y net-tools python27-python-pip \
     xorg-x11-server-Xvfb openbox xterm \
     firefox nss_wrapper nss_wrapper git && \
     yum clean all
+    
+RUN wget https://bootstrap.pypa.io/get-pip.py && \
+    python get-pip.py
 
 RUN pip install --upgrade pip
 RUN pip install zapcli
